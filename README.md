@@ -22,12 +22,14 @@ Libraries and Dependencies
 
 Client (Front End)
 Wireframes
-![image](https://user-images.githubusercontent.com/87203079/135906343-ff14d500-bb91-448c-a8d6-a6e14bcc2dce.png)
+![image](https://user-images.githubusercontent.com/87203079/135937737-bd8ed00d-0e30-4c20-bb82-2aad8cc4ff4e.png)
+
 
 
 
 Component Tree
-![image](https://user-images.githubusercontent.com/87203079/135906681-ac186316-8c77-42c9-ad65-18ed4c4adbd5.png)
+![image](https://user-images.githubusercontent.com/87203079/135937591-f3e681c0-a53f-4578-b85a-c18e1d5b0d75.png)
+
 
 
 
