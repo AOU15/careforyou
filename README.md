@@ -60,8 +60,10 @@ Time Estimates
 Server (Back End)
 ERD Model
 
-![image](https://user-images.githubusercontent.com/87203079/135906012-84dee9e2-f628-4808-82a4-504979e490af.png)
 
+![image](https://user-images.githubusercontent.com/87203079/135937321-d48aed3f-2bbf-4bd2-98b8-67780d8e2d81.png)
+
+![image](https://user-images.githubusercontent.com/87203079/135906012-84dee9e2-f628-4808-82a4-504979e490af.png)
 
 
 Post-MVP
