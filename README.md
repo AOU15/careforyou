@@ -1,6 +1,6 @@
 # careforyou
 
-Overview: This app will allow the user to sign up and choose a specialist pertaining to their area of need. The user will navigate the site to update their personal information on their profile page. Services are listed on the site based on different areas of need. If the user wants to suggest a service the will be able to sumbit suggestions on the app.
+Overview: This app will allow the user to sign up and choose a specialist pertaining to their area of need. The user will navigate the site to update their personal information on their profile page. Services are listed on the site based on different areas of need. The user will also be able to leave a review of the service rendered. If the user wants to suggest a service the will be able to sumbit suggestions on the app.
 
 MVP
 
