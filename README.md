@@ -29,6 +29,9 @@ Component Tree
 
 
 Component Architecture
+
+``` structure
+
 src
 |__ assets/
       |__ fonts
@@ -39,7 +42,7 @@ src
       |__ Header.jsx
 |__ services/
 
-
+```
 
 
 Time Estimates
