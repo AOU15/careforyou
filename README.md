@@ -22,10 +22,14 @@ Libraries and Dependencies
 
 Client (Front End)
 Wireframes
+![image](https://user-images.githubusercontent.com/87203079/135906343-ff14d500-bb91-448c-a8d6-a6e14bcc2dce.png)
 
 
 
 Component Tree
+![image](https://user-images.githubusercontent.com/87203079/135906681-ac186316-8c77-42c9-ad65-18ed4c4adbd5.png)
+
+
 
 
 Component Architecture
@@ -55,6 +59,8 @@ Time Estimates
 
 Server (Back End)
 ERD Model
+![image](https://user-images.githubusercontent.com/87203079/135906012-84dee9e2-f628-4808-82a4-504979e490af.png)
+
 
 
 Post-MVP
