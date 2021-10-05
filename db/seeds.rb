@@ -8,9 +8,9 @@
 
 
 
-User.destroy_all
 Review.destroy_all
 Service.destroy_all
+User.destroy_all
 
 @admin = User.create!(username: 'First', email: 'first@email.com', password:'12345')
 
@@ -30,3 +30,4 @@ puts "#{Service.count} services created"
 
 
 
+Review.create!(content: 'great service', user: @admin)
