@@ -3,6 +3,7 @@ import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
 import { Switch, Route, useHistory } from 'react-router-dom';
+import MainContainer from './containers/MainContainer';
 
 import {
   loginUser,
@@ -20,7 +21,7 @@ function App() {
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
-      setCurrentUser(userData);
+      setUser(userData);
     };
     handleVerify();
   }, []);
@@ -30,6 +31,14 @@ function App() {
     setUser(userData);
     history.push('/');
   };
+
+  const handleRegister = async (registerData) => {
+    const userData = await registerUser(registerData);
+    setUser(userData);
+    history.push('/');
+  };
+
+
 
   const handleLogout = () => {
     setUser(null);
@@ -52,6 +61,7 @@ function App() {
           <Route path='/'>
             <MainContainer />
           </Route>
+  
         </Switch>
       </Layout>
     </div>
