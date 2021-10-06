@@ -30,4 +30,13 @@ puts "#{Service.count} services created"
 
 
 
-Review.create!(content: 'great service', user: @admin)
+Review.create!(content: 'great service', user: @admin , service: @respiratory)
+Review.create!(content: 'great service', user: @admin , service: @cardiovascular)
+Review.create!(content: 'great service', user: @admin , service: @muscular)
+Review.create!(content: 'great service', user: @admin , service: @digestive)
+Review.create!(content: 'great service', user: @admin , service: @skeletal)
+Review.create!(content: 'great service', user: @admin , service: @nasal)
+Review.create!(content: 'great service', user: @admin , service: @reproductive)
+
+
+puts "#{Review.count} reviews created"
