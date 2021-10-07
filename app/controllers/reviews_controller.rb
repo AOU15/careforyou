@@ -4,7 +4,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
+    @service = Service.find(params[:service_id])
+    @reviews = Review.where(service_id: @service.id).all
+
 
     render json: @reviews
   end
@@ -16,8 +18,10 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    @review.user = current_user
-    @review = Review.new(review_params)
+    @service = Service.find(params[:service_id])
+    @review = Review.where(service_id: @service.id).new(review_params)
+
+    @review.user_id = @current_user.id
 
     if @review.save
       render json: @review, status: :created

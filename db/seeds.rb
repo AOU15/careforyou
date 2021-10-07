@@ -37,6 +37,8 @@ Review.create!(content: 'great service', user: @admin , service: @digestive)
 Review.create!(content: 'great service', user: @admin , service: @skeletal)
 Review.create!(content: 'great service', user: @admin , service: @nasal)
 Review.create!(content: 'great service', user: @admin , service: @reproductive)
+Review.create!(content: 'great service and compliments', user: @admin , service: @reproductive)
+
 
 
 puts "#{Review.count} reviews created"
