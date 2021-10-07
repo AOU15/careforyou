@@ -1,8 +1,6 @@
 import api from './config';
 
-
-
-export const putReview = async (id, reviewData) => {
-  const resp = await api.put(`/reviews/${id}`, { review: reviewData });
+export const getAllServices = async () => {
+  const resp = await api.get('/services');
   return resp.data;
 };

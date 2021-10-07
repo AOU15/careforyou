@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route, useHistory, Link } from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 
 import {
@@ -61,7 +61,6 @@ function App() {
           <Route path='/'>
             <MainContainer />
           </Route>
-  
         </Switch>
       </Layout>
     </div>
