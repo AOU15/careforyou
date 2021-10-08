@@ -17,10 +17,13 @@ export default function MainContainer(props) {
     const fetchServices = async () => {
       const serviceList = await getServices();
       setServices(serviceList);
+      console.log(serviceList)
     };
     fetchServices();
   }, []);
 
+  // console.log(service)
+  
   useEffect(() => {
     const fetchReviews = async () => {
       const reviewList = await getAllReviews();
