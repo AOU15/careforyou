@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { putReview, deleteReview, getAllReviews } from '../services/review'
+import { putReview, getAllReviews } from '../services/review'
 import Review from '../screens/Review/Review';
 import ServiceListing from '../screens/ServiceListing/ServiceListing'
 import { getServices } from '../services/service';
@@ -28,6 +28,7 @@ export default function MainContainer(props) {
     const fetchReviews = async () => {
       const reviewList = await getAllReviews();
       setReviews(reviewList);
+      console.log(reviewList)
     };
     fetchReviews();
   }, []);

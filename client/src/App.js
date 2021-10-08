@@ -4,6 +4,7 @@ import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
 import { Switch, Route, useHistory} from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
+import './App.css';
 
 import {
   loginUser,
@@ -58,7 +59,7 @@ function App() {
           <Route path='/register'>
             <Register handleRegister={handleRegister} />
           </Route>
-          <Route path='/'>
+          <Route className='homepage' path='/'>
             <MainContainer />
           </Route>
         </Switch>

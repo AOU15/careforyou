@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import './Register.css';
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ export default function Register(props) {
   };
 
   return (
-    <form
+    <form className='register'
       onSubmit={(e) => {
         e.preventDefault();
         props.handleRegister(formData);

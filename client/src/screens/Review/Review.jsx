@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import { putReview } from '../../services/review';
 // import Layout from '../../layouts/Layout';
+import React from 'react'
 
 export default function Review(props) {
   const [formData, setFormData] = useState({
@@ -31,7 +32,6 @@ export default function Review(props) {
 //     }
 //     fetchReview()
 // }, [id])
-
 
 
 

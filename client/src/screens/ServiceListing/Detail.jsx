@@ -38,6 +38,7 @@ export default function ServiceDetail(props) {
     <div className="service-detail">
       
       <h3>Detail</h3>
+      {/* {services.id} */}
       </div>
   )
 

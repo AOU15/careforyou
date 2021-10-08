@@ -1,0 +1,10 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.register {
+  background-image: url("https://edge-cdn.pratidintime.com/2021/07/Doctors_For_Men-732x549-thumbnail-1-732x549-1.jpg");
+}

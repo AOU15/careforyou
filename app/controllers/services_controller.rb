@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :create]
-  before_action :authorize_request, only: [:index, :create, :show]
+  # before_action :authorize_request, only: [:index, :create, :show]
 
 
   # GET /services

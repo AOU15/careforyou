@@ -1,0 +1,8 @@
+.listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(151, 248, 248, 0.625);
+  padding: 100px;
+}
