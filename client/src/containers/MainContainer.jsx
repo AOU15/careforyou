@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { putReview, deleteReview, getAllReviews } from '../services/review'
 import Review from '../screens/Review/Review';
-import Detail from '../screens/ServiceListing/Detail'
-import { getAllServices } from '../services/service';
+import ServiceListing from '../screens/ServiceListing/ServiceListing'
+import { getServices } from '../services/service';
 
 import { Link } from 'react-router-dom';
 
-export default function MainContainer() {
+export default function MainContainer(props) {
   const [reviews, setReviews] = useState([]);
   const [services, setServices] = useState([]);
   const history = useHistory();
@@ -15,7 +15,7 @@ export default function MainContainer() {
 
   useEffect(() => {
     const fetchServices = async () => {
-      const serviceList = await getAllServices();
+      const serviceList = await getServices();
       setServices(serviceList);
     };
     fetchServices();
@@ -28,14 +28,6 @@ export default function MainContainer() {
     };
     fetchReviews();
   }, []);
-
-
-
-
-
-
-
-
 
 
   const handleReviewUpdate = async (id, reviewData) => {
@@ -52,8 +44,12 @@ export default function MainContainer() {
 
 
   return (<div>
+    {props.user}
     <Switch>
-      
+      <Route path='/services'>
+        <ServiceListing services={services} />
+      </Route>
+      <Link to='/services'>Services</Link>
       <Route path='/reviews'>
         <Review reviews={reviews} handleReviewUpdate={handleReviewUpdate} />
       </Route>
@@ -63,6 +59,7 @@ export default function MainContainer() {
 
       
     </Switch>
+    {props.children}
     </div>
   )
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
-import { Switch, Route, useHistory, Link } from 'react-router-dom';
+import { Switch, Route, useHistory} from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 
 import {
@@ -15,33 +15,33 @@ import {
 import './App.css';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
-      setUser(userData);
+      setCurrentUser(userData);
     };
     handleVerify();
   }, []);
 
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
-    setUser(userData);
+    setCurrentUser(userData);
     history.push('/');
   };
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
-    setUser(userData);
+    setCurrentUser(userData);
     history.push('/');
   };
 
 
 
   const handleLogout = () => {
-    setUser(null);
+    setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
   };
@@ -50,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <Layout user={user} handleLogout={handleLogout}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
         <Route path='/login'>
             <Login handleLogin={handleLogin} />

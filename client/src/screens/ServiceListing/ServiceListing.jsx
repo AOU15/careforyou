@@ -1,16 +1,18 @@
 import React from 'react';
-import { getAllServices } from '../../services/service';
-import { useEffect } from 'react'
+import { getServices } from '../../services/service';
+import { useState, useEffect } from 'react'
+
+// import Layout from '../../layouts/Layout';
 
 
 export default function Listing(props) {
 
-  const [services, setServices] = useState([]);
+  const [services, setServices] = useState({});
   
 
   useEffect(() => {
     const fetchServices = async () => {
-      const allServices = await getAllServices()
+      const allServices = await getServices()
         setServices(allServices)
     
       }
@@ -22,12 +24,15 @@ export default function Listing(props) {
 
 
   return (
+    
+      
     <div>
       <h3>Listings</h3>
       {props.services.map(service => (
         <p key={service.id}>{service.name}</p>
       ))}
-</div>
+      </div>
+      
   )
 }
 

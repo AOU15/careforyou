@@ -10,13 +10,13 @@ export const getOneReviews = async (id) => {
   return resp.data;
 };
 
-export const putReview = async (id, reviewData) => {
-  const resp = await api.put(`/reviews/${id}`, { review: reviewData });
+export const postReview = async (reviewData) => {
+  const resp = await api.post('/reviews', { review: reviewData });
   return resp.data;
 };
 
-export const postReview = async (reviewData) => {
-  const resp = await api.post('/reviews', { review: reviewData });
+export const putReview = async (id, reviewData) => {
+  const resp = await api.put(`/reviews/${id}`, { review: reviewData });
   return resp.data;
 };
 
@@ -24,3 +24,4 @@ export const deleteReview = async (id) => {
   const resp = await api.delete(`/reviews/${id}`);
   return resp;
 };
+
