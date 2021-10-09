@@ -31,20 +31,22 @@ export default function Listing(props) {
     
       
     <div className='listing'>
+    
       <h3>Listings</h3>
-      
       {props.services.map((service) => (
         <p key={service.id}>
           {service.specialty}
           {service.description}
-          
-          
-          
+          {service.reviews.map((review) => (
+           <p> {review.content} </p>
+          ))}
         </p>
-        
       ))}
       </div>
-      
+
+
+
+
   )
 }
 
