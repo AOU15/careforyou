@@ -22,8 +22,8 @@ export default function Layout(props) {
           Reviews
         </NavLink>
 
-        <Link className="link" to="/suggesstions">
-          Suggestions
+        <Link className="link" to="/suggesstion">
+          Suggestion
         </Link>
 
         <Link className="link" to="/register">
@@ -33,6 +33,8 @@ export default function Layout(props) {
         <Link className="link" to="/services">
           Services
         </Link>
+        
+
 
         {props.children}
       </div>

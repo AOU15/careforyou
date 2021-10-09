@@ -5,7 +5,7 @@ import Register from './screens/Register/Register';
 import { Switch, Route, useHistory, Link} from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import './App.css';
-import Suggestions from './screens/Suggestion/Suggestion';
+import Suggestion from './screens/Suggestion/Suggestion';
 
 import {
   loginUser,
@@ -60,15 +60,17 @@ function App() {
           <Route path='/register'>
             <Register handleRegister={handleRegister} />
           </Route>
-          <Route path='/suggestions'>
-        <Suggestions />
-      </Route>
-          <Link to='/suggestions'>Suggestions</Link>
-          
 
+           
+          
           <Route className='homepage' path='/'>
-            <MainContainer />
+          <MainContainer />
           </Route>
+
+           <Route path='/suggestion'>
+        <Suggestion />
+      </Route> 
+          <Link to='/suggestion'>Suggestions</Link>
           
         </Switch>
       </Layout>

@@ -5,7 +5,7 @@ import Review from "../screens/Review/Review";
 import ServiceListing from "../screens/ServiceListing/ServiceListing";
 import { getServices } from "../services/service";
 import { Link } from "react-router-dom";
-import Suggestions from "../screens/Suggestion/Suggestion";
+import Suggestion from "../screens/Suggestion/Suggestion";
 
 export default function MainContainer(props) {
   const [reviews, setReviews] = useState([]);
@@ -47,15 +47,17 @@ export default function MainContainer(props) {
       {props.user}
       <Switch>
         <Route path="/services">
-          <ServiceListing services={services} />
+          <ServiceListing services={services} reviews={reviews} />
         </Route>
-        <Link to="/services">Services</Link>
+        
         <Route path="/reviews">
           <Review reviews={reviews} handleReviewUpdate={handleReviewUpdate} />
         </Route>
-        <Link to="/reviews">Review</Link>
-
-        <Link to="/register">Register</Link>
+        
+        <Route exact path="/suggestion">
+          <Suggestion />
+          
+        </Route>
 
         
       </Switch>

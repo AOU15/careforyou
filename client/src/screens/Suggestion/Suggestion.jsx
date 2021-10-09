@@ -1,5 +1,7 @@
 import './Suggestion.css'
-export default function Suggestions() {
+
+
+export default function Suggestion() {
   return (
     <form className='suggestions'>
       <label>
@@ -15,7 +17,14 @@ export default function Suggestions() {
           type='text'
         />
       </label>
-
+      <br />
+      <label>
+        Service:
+        <input
+          type='text'
+        />
+      </label>
+      <button>Submit</button>
     </form>
   )
 }
