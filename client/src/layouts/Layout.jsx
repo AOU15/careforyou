@@ -22,7 +22,7 @@ export default function Layout(props) {
           Reviews
         </NavLink>
 
-        <Link className="link" to="/suggesstion">
+        <Link className="link" to="/suggestion">
           Suggestion
         </Link>
 

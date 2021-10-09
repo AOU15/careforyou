@@ -7,7 +7,7 @@ class ServicesController < ApplicationController
   def index
     @services = Service.all
 
-    render json: @services
+    render json: @services, include: :reviews
   end
 
   # GET /services/1

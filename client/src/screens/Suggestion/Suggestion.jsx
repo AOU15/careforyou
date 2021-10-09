@@ -3,6 +3,8 @@ import './Suggestion.css'
 
 export default function Suggestion() {
   return (
+    <div>
+    <p>Hi</p>
     <form className='suggestions'>
       <label>
         Patient:
@@ -25,6 +27,7 @@ export default function Suggestion() {
         />
       </label>
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
   )
 }
