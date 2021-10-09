@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getAllServices } from '../../services/service';
+import { getOneService } from '../../services/service';
+import { Route, Link } from 'react-router-dom';
+
+
+
+
 
 export default function ServiceDetail(props) {
   const [service, setService] = useState({
@@ -17,7 +22,7 @@ export default function ServiceDetail(props) {
 
   useEffect(() => {
     const fecthServiceData = async () => {
-      const serviceData = await getAllServices(id);
+      const serviceData = await getOneService(id);
       setService(serviceData);
     };
     fecthServiceData();
@@ -30,15 +35,26 @@ export default function ServiceDetail(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const service = await getAllServices(id)
+    const service = await getOneService(id)
     setService(service)
   };
 
   return (
     <div className="service-detail">
       
+
+
       <h3>Detail</h3>
-      {/* {services.id} */}
+      {service.specialist}
+      {service.description}
+      <button>Leave a Review</button>
+
+
+      
+
+
+
+
       </div>
   )
 

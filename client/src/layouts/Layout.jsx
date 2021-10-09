@@ -7,37 +7,39 @@ export default function Layout(props) {
         <h1 className="title">Care For You</h1>{" "}
       </div>
 
-      <div className="layout">
+      <div className="link">
         {props.user}
 
-        <Link className="link" to="/login">
+        <Link  to="/login">
           Login
         </Link>
 
-        <NavLink className="link" to="/logout">
+        <NavLink  to="/logout">
           Logout
         </NavLink>
 
-        <NavLink className="link" to="/reviews">
+        <NavLink  to="/reviews">
           Reviews
         </NavLink>
 
-        <Link className="link" to="/suggestion">
+        <Link  to="/suggestion">
           Suggestion
         </Link>
 
-        <Link className="link" to="/register">
+        <Link  to="/register">
           Register
         </Link>
 
-        <Link className="link" to="/services">
+        <Link  to="/services">
           Services
         </Link>
         
+        <Link to="/service/:id">
+          Detail
+        </Link>
 
-
-        {props.children}
       </div>
+        {props.children}
     </>
   );
 }

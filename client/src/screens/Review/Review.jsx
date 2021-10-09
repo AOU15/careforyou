@@ -48,7 +48,7 @@ export default function Review(props) {
 
   return (
    
-    <form
+    <form className='review-form'
       onSubmit={(e) => {
         e.preventDefault();
         props.handleReviewUpdate(id, formData);

@@ -4,7 +4,7 @@ import { putReview, getAllReviews } from "../services/review";
 import Review from "../screens/Review/Review";
 import ServiceListing from "../screens/ServiceListing/ServiceListing";
 import { getServices } from "../services/service";
-import { Link } from "react-router-dom";
+import ServiceDetail from "../screens/ServiceListing/Detail";
 import Suggestion from "../screens/Suggestion/Suggestion";
 
 export default function MainContainer(props) {
@@ -56,9 +56,14 @@ export default function MainContainer(props) {
         
         <Route exact path="/suggestion">
           <Suggestion />
-          
         </Route>
 
+        <Route path='/service/:id'>  
+            <ServiceDetail />
+          </Route>
+
+        
+          
         
       </Switch>
       {props.children}

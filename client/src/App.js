@@ -6,6 +6,7 @@ import { Switch, Route, useHistory, Link} from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import './App.css';
 import Suggestion from './screens/Suggestion/Suggestion';
+import ServiceDetail from './screens/ServiceListing/Detail';
 
 import {
   loginUser,
@@ -71,7 +72,10 @@ function App() {
         <Suggestion />
       </Route> 
           <Link to='/suggestion'>Suggestions</Link>
-          
+
+
+        
+
         </Switch>
       </Layout>
     </div>
