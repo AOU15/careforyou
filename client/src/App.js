@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import Layout from './layouts/Layout';
 import Login from './screens/Login/Login';
 import Register from './screens/Register/Register';
-import { Switch, Route, useHistory} from 'react-router-dom';
+import { Switch, Route, useHistory, Link} from 'react-router-dom';
 import MainContainer from './containers/MainContainer';
 import './App.css';
+import Suggestions from './screens/Suggestion/Suggestion';
 
 import {
   loginUser,
@@ -13,7 +14,7 @@ import {
   removeToken,
 } from './services/auth';
 
-import './App.css';
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -59,9 +60,16 @@ function App() {
           <Route path='/register'>
             <Register handleRegister={handleRegister} />
           </Route>
+          <Route path='/suggestions'>
+        <Suggestions />
+      </Route>
+          <Link to='/suggestions'>Suggestions</Link>
+          
+
           <Route className='homepage' path='/'>
             <MainContainer />
           </Route>
+          
         </Switch>
       </Layout>
     </div>
