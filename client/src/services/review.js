@@ -5,7 +5,7 @@ export const getAllReviews = async () => {
   return resp.data;
 };
 
-export const getOneReviews = async (id) => {
+export const getOneReview = async (id) => {
   const resp = await api.get(`/reviews/${id}`);
   return resp.data;
 };
@@ -15,8 +15,8 @@ export const postReview = async (serviceId, reviewData) => {
   return resp.data;
 };
 
-export const putReview = async (serviceId, reviewData) => {
-  const resp = await api.put(`/services/${serviceId}/reviews`, { review: reviewData });
+export const putReview = async (id, reviewData) => {
+  const resp = await api.put(`/reviews/${id}`, { review: reviewData });
   return resp.data;
 };
 

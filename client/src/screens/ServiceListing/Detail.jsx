@@ -49,7 +49,9 @@ export default function Detail(props) {
         <div>
 
           <p> {review.content} </p>
+          <Link to={`/reviews/${review.id}/services/${specificService?.id}`}>
           <button>edit</button>
+          </Link>
           <button onClick={()=> props.handleReviewDelete(review.id)}>delete</button>
         </div>
       ))}
