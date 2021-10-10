@@ -3,7 +3,7 @@ body {
   background-image: url("https://assets.weforum.org/article/image/large_9uyGPe4H6EsYvEKaga0NCDlBS1EhWVC7FznJh8VMBm8");
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .link {

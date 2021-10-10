@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { putReview } from '../../services/review';
 // import Layout from '../../layouts/Layout';
 import React from 'react'
+import './Review.css'
 
 export default function Review(props) {
   const [formData, setFormData] = useState({
@@ -60,7 +61,7 @@ export default function Review(props) {
         Patient:
         <input
           type='text'
-          name='name'
+          
           value={formData.name}
           onChange={handleChange}
         />
@@ -70,18 +71,18 @@ export default function Review(props) {
         service:
         <input
           type='text'
-          name='name'
-          value={formData.name}
+          
+          value={formData.specialist}
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
         Comment:
-        <input
+        <input className='comment'
           type='text'
-          name='name'
-          value={formData.name}
+          
+          value={formData.comment}
           onChange={handleChange}
         />
       </label>

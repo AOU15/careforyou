@@ -1,7 +1,12 @@
 .review-form {
   display: flex;
   flex-direction: column;
-  align-self: center;
-  padding: 60px;
+  justify-content: center;
+  /* align-self: center; */
+  /* padding: 60px; */
   margin: 80px;
+}
+
+.comment {
+  padding: 80px;
 }
