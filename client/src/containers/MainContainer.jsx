@@ -4,7 +4,7 @@ import { putReview, getAllReviews } from "../services/review";
 import Review from "../screens/Review/Review";
 import ServiceListing from "../screens/ServiceListing/ServiceListing";
 import { getServices } from "../services/service";
-import ServiceDetail from "../screens/ServiceListing/Detail";
+import Detail from "../screens/ServiceListing/Detail";
 import Suggestion from "../screens/Suggestion/Suggestion";
 
 export default function MainContainer(props) {
@@ -59,7 +59,7 @@ export default function MainContainer(props) {
         </Route>
 
         <Route path='/service/:id'>  
-            <ServiceDetail />
+          <Detail services={services} />
           </Route>
 
         
