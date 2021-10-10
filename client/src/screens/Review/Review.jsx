@@ -61,7 +61,7 @@ export default function Review(props) {
         Patient:
         <input
           type='text'
-          
+          name='patient'
           value={formData.name}
           onChange={handleChange}
         />
@@ -71,7 +71,7 @@ export default function Review(props) {
         service:
         <input
           type='text'
-          
+          name='specialist'
           value={formData.specialist}
           onChange={handleChange}
         />
@@ -81,7 +81,7 @@ export default function Review(props) {
         Comment:
         <input className='comment'
           type='text'
-          
+          name='comment'
           value={formData.comment}
           onChange={handleChange}
         />
