@@ -1,21 +1,19 @@
-import { useState, useEffect } from 'react'
-import Layout from './layouts/Layout';
-import Login from './screens/Login/Login';
-import Register from './screens/Register/Register';
-import { Switch, Route, useHistory, Link} from 'react-router-dom';
-import MainContainer from './containers/MainContainer';
-import './App.css';
-import Suggestion from './screens/Suggestion/Suggestion';
-import ServiceDetail from './screens/ServiceListing/Detail';
+import { useState, useEffect } from "react";
+import Layout from "./layouts/Layout";
+import Login from "./screens/Login/Login";
+import Register from "./screens/Register/Register";
+import { Switch, Route, useHistory, Link } from "react-router-dom";
+import MainContainer from "./containers/MainContainer";
+import "./App.css";
+import Suggestion from "./screens/Suggestion/Suggestion";
+import ServiceDetail from "./screens/ServiceListing/Detail";
 
 import {
   loginUser,
   registerUser,
   verifyUser,
   removeToken,
-} from './services/auth';
-
-
+} from "./services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -32,50 +30,39 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push("/services");
   };
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push("/services");
   };
-
-
 
   const handleLogout = () => {
     setCurrentUser(null);
-    localStorage.removeItem('authToken');
+    localStorage.removeItem("authToken");
     removeToken();
+    history.push("/login")
   };
-
-
 
   return (
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-        <Route path='/login'>
+          <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
-          <Route path='/register'>
+          <Route path="/register">
             <Register handleRegister={handleRegister} />
           </Route>
-
-           
-          
-          <Route className='homepage' path='/'>
-          <MainContainer />
+          <Route path="/suggestion">
+            <Suggestion />
           </Route>
-
-           <Route path='/suggestion'>
-        <Suggestion />
-      </Route> 
-          <Link to='/suggestion'>Suggestions</Link>
-
-
-        
-
+          <Route className="homepage" path="/">
+            <MainContainer />
+          </Route>
+          {/* <Link to="/suggestion">Suggestions</Link> */}
         </Switch>
       </Layout>
     </div>

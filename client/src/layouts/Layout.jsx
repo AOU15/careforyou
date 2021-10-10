@@ -8,22 +8,23 @@ export default function Layout(props) {
       </div>
 
       <div className="link">
-        {props.user}
-
-        <Link to="/login">Login</Link>
-        <br />
-
-        <NavLink to="/logout">Logout</NavLink>
-        <br />
-        <NavLink to="/reviews">Reviews</NavLink>
-        <br />
-        <Link to="/suggestion">Suggestion</Link>
-        <br />
-        <Link to="/register">Register</Link>
-        <br />
-        <Link to="/services">Services</Link>
-        <br />
-        <Link to="/service/:id">Detail</Link>
+        {props.currentUser ? (
+          <>
+            <button onClick={props.handleLogout}>Logout</button>
+            <br />
+            <NavLink to="/reviews">Reviews</NavLink>
+            <br />
+            <Link to="/suggestion">Suggestion</Link>
+            <br />
+            <Link to="/services">Services</Link>
+          </>
+        ) : (
+          <>
+            <Link to="/login">Login</Link>
+            <br />
+            <Link to="/register">Register</Link>
+          </>
+        )}
       </div>
       {props.children}
     </>

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/auth/verify', to: 'authentication#verify'
   
   resources :services do 
-    resources :reviews
+    resources :reviews, shallow: true
   end
   resources :services, except: [:update, :destroy]
   resources :users, only: :create

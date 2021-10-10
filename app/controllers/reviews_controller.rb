@@ -1,27 +1,28 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :update, :destroy]
-  # before_action :authorize_request, only: [:index, :show, :create, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /reviews
-  def index
-    @service = Service.find(params[:service_id])
-    @reviews = Review.where(service_id: @service.id).all
+  # def index
+  #   @service = Service.find(params[:service_id])
+  #   @reviews = Review.where(service_id: @service.id).all
 
 
-    render json: @reviews
-  end
+  #   render json: @reviews
+  # end
 
   # GET /reviews/1
   def show
     render json: @review
   end
 
-  # POST /reviews
+  # POST /services/:service_id/reviews
   def create
     @service = Service.find(params[:service_id])
-    @review = Review.where(service_id: @service.id).new(review_params)
+    @review = Review.new(review_params)
 
-    @review.user_id = @current_user.id
+    @review.user = @current_user
+    @review.service = @service
 
     if @review.save
       render json: @review, status: :created
@@ -52,6 +53,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:content, :references, :references)
+      params.require(:review).permit(:content)
     end
 end

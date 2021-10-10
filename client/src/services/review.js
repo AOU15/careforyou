@@ -1,7 +1,7 @@
 import api from './config';
 
 export const getAllReviews = async () => {
-  const resp = await api.get('/reviews');
+  const resp = await api.get('/services/reviews');
   return resp.data;
 };
 
@@ -10,13 +10,13 @@ export const getOneReviews = async (id) => {
   return resp.data;
 };
 
-export const postReview = async (reviewData) => {
-  const resp = await api.post('/reviews', { review: reviewData });
+export const postReview = async (serviceId, reviewData) => {
+  const resp = await api.post(`/services/${serviceId}/reviews`, { review: reviewData });
   return resp.data;
 };
 
-export const putReview = async (id, reviewData) => {
-  const resp = await api.put(`/reviews/${id}`, { review: reviewData });
+export const putReview = async (serviceId, reviewData) => {
+  const resp = await api.put(`/services/${serviceId}/reviews`, { review: reviewData });
   return resp.data;
 };
 

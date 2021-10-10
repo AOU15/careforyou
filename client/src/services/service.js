@@ -6,6 +6,6 @@ export const getServices = async () => {
 };
 
 export const getOneService = async (id) => {
-  const resp = await api.get(`/service/${id}`);
+  const resp = await api.get(`/services/${id}`);
   return resp.data;
 };

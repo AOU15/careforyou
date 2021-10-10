@@ -1,30 +1,32 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom'
-import { putReview } from '../../services/review';
+// import { Link, Redirect } from 'react-router-dom'
+// import { putReview } from '../../services/review';
 // import Layout from '../../layouts/Layout';
-import React from 'react'
+
 import './Review.css'
 
+
+
 export default function Review(props) {
+  // const [isUpdated, setUpdated] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    specialist: '',
-    comment: '',
+    content: '',
   });
   const { id } = useParams();
-
-  useEffect(() => {
-    const prefillFormData = () => {
-      const singleReview = props.reviews.find(review => review.id === Number(id))
-      setFormData({
-        name: singleReview.patient,
-      });
-    }
-    if (props.reviews.length) {
-      prefillFormData();
-    }
-  }, [props.reviews, id]);
+  
+  
+  // useEffect(() => {
+  //   const prefillFormData = () => {
+  //     const singleReview = props.reviews.find(review => review.id === Number(id))
+  //     setFormData({
+  //       name: singleReview.patient,
+  //     });
+  //   }
+  //   if (props.reviews.length) {
+  //     prefillFormData();
+  //   }
+  // }, [props.reviews, id]);
 
 //   useEffect(() => {
 //     const fetchReview = async () => {
@@ -34,8 +36,7 @@ export default function Review(props) {
 //     fetchReview()
 // }, [id])
 
-
-
+  
 
 
 
@@ -47,17 +48,32 @@ export default function Review(props) {
     }));
   };
 
+// const handleDelete = async (event)
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault()
+//   const updated = await props.handleReviewCreate(id, formData);
+//   setUpdated(updated)
+// }
+// if (isUpdated) {
+//   return <Redirect to={`/services/:id`} />
+// }
+
+
+
+
+
   return (
    
     <form className='review-form'
       onSubmit={(e) => {
         e.preventDefault();
-        props.handleReviewUpdate(id, formData);
+        props.handleReviewCreate(id, formData);
       }}
     >
       <h3>Review</h3>
       
-      <label>
+      {/* <label>
         Patient:
         <input
           type='text'
@@ -76,17 +92,18 @@ export default function Review(props) {
           onChange={handleChange}
         />
       </label>
-      <br />
+      <br /> */}
       <label>
         Comment:
         <input className='comment'
           type='text'
-          name='comment'
-          value={formData.comment}
+          name='content'
+          value={formData.content}
           onChange={handleChange}
         />
       </label>
       <button>Submit</button>
+      
     </form>
   );
 }

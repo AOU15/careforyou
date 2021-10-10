@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Layout from '../../layouts/Layout';
-import './Login.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Layout from "../../layouts/Layout";
+import "./Login.css";
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
-    username: '',
-    passsword: '',
+    username: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -17,16 +17,19 @@ export default function Login(props) {
     }));
   };
   return (
-    <form className='login' onSumbit={(e) => {
-      e.preventDefault();
-      props.handleLogin(formData);
-    }}>
+    <form
+      className="login"
+      onSubmit={(e) => {
+        e.preventDefault();
+        props.handleLogin(formData);
+      }}
+    >
       <h3>Login</h3>
       <label>
         Username:
         <input
-          type='text'
-          name='username'
+          type="text"
+          name="username"
           value={formData.username}
           onChange={handleChange}
         />
@@ -35,16 +38,14 @@ export default function Login(props) {
       <label>
         Password:
         <input
-          type='password'
-          name='password'
+          type="password"
+          name="password"
           value={formData.password}
           onChange={handleChange}
         />
       </label>
       <br />
       <button>Submit</button>
-      
-
     </form>
-  )
+  );
 }
