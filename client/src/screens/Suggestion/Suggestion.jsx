@@ -26,7 +26,7 @@ export default function Suggestion() {
           type='text'
         />
       </label>
-      <button>Submit</button>
+      <button className='submitbutton'>Submit Suggestion</button>
       </form>
       </div>
   )

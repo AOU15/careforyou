@@ -43,31 +43,23 @@ export default function Detail(props) {
       <h3>Detail</h3>
       <p className="container" key={specificService?.id}>
         {specificService?.specialty}
+        <br />
         {specificService?.description}
+        {/* {specificService?.image_url} */}
       </p>
       {specificService?.reviews.map((review) => (
         <div>
 
-          <p> {review.content} </p>
+          <p className='review-content'> {review.content} </p>
           <Link to={`/reviews/${review.id}/services/${specificService?.id}`}>
-          <button>edit</button>
+          <button className='editbutton'>edit</button>
           </Link>
-          <button onClick={()=> props.handleReviewDelete(review.id)}>delete</button>
+          <button className='deletebutton'onClick={()=> props.handleReviewDelete(review.id)}>delete</button>
         </div>
       ))}
-      {/* {specificService?.map((service) => (
-        <p className='container' key={service.id}>
-          {service.specialty}
-          {service.description}
-          {/* {service.image_url} */}
-      {/* {service.reviews.map((review) => (
-           <p> {review.content} </p>
-          ))}
-        </p>
-      ))} */}
       
       <Link to={`/services/${specificService?.id}/reviews`}>
-        <button>Leave a Review</button>
+        <button className='leave-review'>Leave A Review</button>
       </Link>
     </div>
   );

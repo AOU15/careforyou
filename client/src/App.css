@@ -3,17 +3,16 @@ body {
   background-image: url("https://assets.weforum.org/article/image/large_9uyGPe4H6EsYvEKaga0NCDlBS1EhWVC7FznJh8VMBm8");
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
 }
 
 .link {
-  background-color: rgba(232, 222, 210, 0.714);
+  background-color: rgba(247, 245, 243, 0.893);
   display: block;
-  width: 80px;
+  width: 150px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  /* margin-right: 750px; */
+
   height: 100%;
   position: fixed;
   overflow: auto;
@@ -21,9 +20,13 @@ body {
 
 body {
   background-image: url("https://assets.weforum.org/article/image/large_9uyGPe4H6EsYvEKaga0NCDlBS1EhWVC7FznJh8VMBm8");
-
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* background-size: cover; */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: bisque;
+  }
 }

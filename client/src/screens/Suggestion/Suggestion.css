@@ -3,12 +3,26 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 100px;
-  margin: 80px;
-  /* background-repeat: no-repeat; */
+  padding: 90px;
+  margin: 300px;
   background-position: center;
   background-size: cover;
   height: 600px;
   background-blend-mode: lighten;
   background-repeat: no-repeat, repeat;
+}
+
+.submitbutton {
+  margin: auto;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+}
+
+input {
+  padding: 10px;
 }

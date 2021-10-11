@@ -8,4 +8,14 @@
 .register {
   background-image: url("https://edge-cdn.pratidintime.com/2021/07/Doctors_For_Men-732x549-thumbnail-1-732x549-1.jpg");
   background-size: cover;
+  margin: 200px;
+  background-blend-mode: lighten;
+  background-repeat: no-repeat, repeat;
+  height: 300px;
+  justify-content: center;
+  background-position: center;
+}
+
+button {
+  margin: auto;
 }

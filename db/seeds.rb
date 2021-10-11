@@ -22,7 +22,7 @@ puts "#{User.count} users created"
 @muscular = Service.create!(specialty:'myology', description: 'asses the movement of the body, posture, circulation of blood through the body', image_url: 'https://d3q6qq2zt8nhwv.cloudfront.net/course/036baf3eabfd4752bfd2bb71116f66f7.jpg')
 @digestive = Service.create!(specialty:'gastroenterology', description: 'asses the function of the digestive system', image_url: 'https://d3idks24kkd2lv.cloudfront.net/wp-content/uploads/2020/02/Food-Digestion-Feature-1024x555.jpg')
 @skeletal = Service.create!(specialty:'osteology', description: 'asses the function of the skeleton and bony structures', image_url: 'https://cdn.mos.cms.futurecdn.net/mGfKXFfhxXuLuoCT8ZnuxZ.jpg')
-@nasal = Service.create!(specialty:'nasal physiology', description: 'treatment of the nasal and sinus passages', image_url: 'https://www.visiblebody.com/hs-fs/hub/189659/file-2545156217.jpg')
+@nasal = Service.create!(specialty:'nasal physiology', description: 'treatment of the nasal and sinus passages', image_url: 'https://imgur.com/JKyqEG9.jpg')
 @reproductive = Service.create!(specialty:'reproductive biology', description: 'treatments for reproductive disorders', image_url: 'https://assets.puzzlefactory.pl/puzzle/246/763/original.jpg')
 
 

@@ -1,6 +1,49 @@
 .service-detail {
-  /* display: flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   margin-left: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+}
+
+.leave-review {
+  margin: 30px;
+  padding: 20px;
+  font-size: medium;
+  background-color: rgb(249, 244, 224);
+  border: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.editbutton,
+.deletebutton {
+  margin: 30px;
+  background-color: rgb(37, 154, 205);
+  color: antiquewhite;
+  border: none;
+  padding: 15px;
+}
+
+h3 {
+  color: rgb(163, 163, 196);
+}
+
+@media screen and (max-width: 768px) {
+  .listing {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }

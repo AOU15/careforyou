@@ -12,7 +12,7 @@ export default function Listing(props) {
 
   return (
     <div className="listing">
-      <h3>Listings</h3>
+      <h1>Services</h1>
 
       {/* {props.services.map((service) => (
         <p className='container' key={service.id}>
@@ -26,7 +26,7 @@ export default function Listing(props) {
         </p>
       ))} */}
 
-      <Link to={`/services/${158}`}>
+      <Link to={`/services/${165}`}>
         <img
           className="heart-img"
           src="https://imgur.com/udnSIzs.jpg"
@@ -34,7 +34,7 @@ export default function Listing(props) {
         ></img>
       </Link>
 
-      <Link to={`/services/${157}`}>
+      <Link to={`/services/${164}`}>
         <img
           className="lung-img"
           src="https://imgur.com/XnHGPXw.jpg"
@@ -42,7 +42,7 @@ export default function Listing(props) {
         ></img>
       </Link>
 
-      <Link to={`/services/${159}`}>
+      <Link to={`/services/${166}`}>
         <img
           className="muscle-img"
           src="https://imgur.com/c4Ojn24.jpg"
@@ -50,7 +50,7 @@ export default function Listing(props) {
         ></img>
       </Link>
 
-      <Link to={`/services/${160}`}>
+      <Link to={`/services/${167}`}>
         <img
           className="gastro-img"
           src="https://i.imgur.com/d7OhE6J.jpg"
@@ -58,7 +58,7 @@ export default function Listing(props) {
         ></img>
       </Link>
 
-      <Link to={`/services/${161}`}>
+      <Link to={`/services/${168}`}>
         <img
           className="bones-img"
           src="https://imgur.com/tRPhSke.jpg"
@@ -66,7 +66,7 @@ export default function Listing(props) {
         ></img>
       </Link>
 
-      <Link to={`/services/${162}`}>
+      <Link to={`/services/${169}`}>
         <img
           className="nose-img"
           src="https://imgur.com/JKyqEG9.jpg"
@@ -74,7 +74,7 @@ export default function Listing(props) {
         ></img>
       </Link>
 
-      <Link to={`/services/${163}`}>
+      <Link to={`/services/${170}`}>
         <img
           className="repro-img"
           src="https://imgur.com/TFgZyJp.jpg"
