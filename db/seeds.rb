@@ -17,7 +17,7 @@ User.destroy_all
 puts "#{User.count} users created"
 
 
-@respiratory = Service.create!(specialty: 'pulmonology', description: 'listen to lungs for any signs of distress', image_url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fbaycare.org%2Fservices%2Fpulmonary-and-respiratory&psig=AOvVaw0ghSPAX0VjdHIXkXeHB4zo&ust=1633534871276000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjvqvHNs_MCFQAAAAAdAAAAABAJ')
+@respiratory = Service.create!(specialty: 'pulmonology', description: 'listen to lungs for any signs of distress', image_url: 'https://baycare.org/-/media/project/baycare/consumer-portal/service-line-pages/pulmonary-and-respiratory/lung-doctor_580747432.jpg')
 @cardiovascular = Service.create!(specialty:'cardiology', description: 'asses the transport of nutrients and oxygen-rich blood to all parts of the body', image_url: 'https://cdn.mos.cms.futurecdn.net/pYF5YURHV2xggu6L2Dnjfb-970-80.jpg.webp')
 @muscular = Service.create!(specialty:'myology', description: 'asses the movement of the body, posture, circulation of blood through the body', image_url: 'https://d3q6qq2zt8nhwv.cloudfront.net/course/036baf3eabfd4752bfd2bb71116f66f7.jpg')
 @digestive = Service.create!(specialty:'gastroenterology', description: 'asses the function of the digestive system', image_url: 'https://d3idks24kkd2lv.cloudfront.net/wp-content/uploads/2020/02/Food-Digestion-Feature-1024x555.jpg')

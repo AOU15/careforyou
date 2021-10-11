@@ -62,7 +62,7 @@ function App() {
           <Route className="homepage" path="/">
             <MainContainer />
           </Route>
-          {/* <Link to="/suggestion">Suggestions</Link> */}
+          
         </Switch>
       </Layout>
     </div>

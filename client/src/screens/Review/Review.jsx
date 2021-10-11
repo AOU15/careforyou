@@ -15,30 +15,6 @@ export default function Review(props) {
   });
   const { id } = useParams();
   
-  
-  // useEffect(() => {
-  //   const prefillFormData = () => {
-  //     const singleReview = props.reviews.find(review => review.id === Number(id))
-  //     setFormData({
-  //       name: singleReview.patient,
-  //     });
-  //   }
-  //   if (props.reviews.length) {
-  //     prefillFormData();
-  //   }
-  // }, [props.reviews, id]);
-
-//   useEffect(() => {
-//     const fetchReview = async () => {
-//       const formData = await putReview(id)
-//       setFormData(formData)
-//     }
-//     fetchReview()
-// }, [id])
-
-  
-
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,20 +23,6 @@ export default function Review(props) {
       [name]: value,
     }));
   };
-
-// const handleDelete = async (event)
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault()
-//   const updated = await props.handleReviewCreate(id, formData);
-//   setUpdated(updated)
-// }
-// if (isUpdated) {
-//   return <Redirect to={`/services/:id`} />
-// }
-
-
-
 
 
   return (
@@ -73,26 +35,6 @@ export default function Review(props) {
     >
       <h3>Review</h3>
       
-      {/* <label>
-        Patient:
-        <input
-          type='text'
-          name='patient'
-          value={formData.name}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        service:
-        <input
-          type='text'
-          name='specialist'
-          value={formData.specialist}
-          onChange={handleChange}
-        />
-      </label>
-      <br /> */}
       <label>
         Comment:
         <input className='comment'

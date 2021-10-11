@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import './Register.css';
 
 export default function Register(props) {
@@ -56,8 +56,7 @@ export default function Register(props) {
       </label>
       <br />
       <button>Submit</button>
-      {/* <Link to='register'>Register</Link> */}
-
+    
     </form>
   );
 }

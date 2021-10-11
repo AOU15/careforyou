@@ -6,12 +6,7 @@ import './Detail.css'
 
 export default function Detail(props) {
   const [specificService, setSpecificService] = useState(null);
-  // const [service, setService] = useState({
-  //   specialist: '',
-  //   description: '',
-  //   image_url: '',
-
-  // });
+  
 
   const { id } = useParams();
 
@@ -25,28 +20,15 @@ export default function Detail(props) {
     fecthServiceData();
   }, [id, props.toggle]);
 
-  // const handleChange = (e) => {
-  //   const { value } = e.target;
-  //   setSelectedService(value);
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const service = await getOneService(id)
-  //   setService(service)
-  // };
-
+  
   console.log(props.services);
 
   return (
     <div className="service-detail">
       <h3>Detail</h3>
-      <p className="container" key={specificService?.id}>
-        {specificService?.specialty}
-        <br />
-        {specificService?.description}
-        {/* {specificService?.image_url} */}
-      </p>
+      <p className="container">{specificService?.specialty}</p>
+      <p>{specificService?.description}</p>
+        <img src={specificService?.image_url} />
       {specificService?.reviews.map((review) => (
         <div>
 
