@@ -22,49 +22,12 @@
 } */
 
 .heart-img {
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
   border-radius: 4px;
-  padding: 5px;
-  width: 150px;
+  padding: 10px;
+  width: 170px;
 }
 
-.lung-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-.muscle-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-.gastro-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-.bones-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-
-.nose-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
-.repro-img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
 h1 {
   color: rgb(94, 94, 107);
   font-size: xx-large;

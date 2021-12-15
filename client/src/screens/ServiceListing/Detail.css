@@ -1,19 +1,42 @@
 .service-detail {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  margin-left: 80px;
+  margin-left: 700px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: x-large;
+  padding: 50px;
+  box-shadow: 0 10px 10px 0 rgba(91, 89, 89, 0.2);
+  transition: 0.3s;
+  background-color: #f7f1f14d;
+  position: fixed;
+}
+
+.detail-img {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* justify-content: flex-start; */
+  align-items: center;
+  align-content: center;
+  padding: 60px;
+  /* width: 50%;
+  height: auto; */
+}
+.review-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .leave-review {
   margin: 30px;
   padding: 20px;
   font-size: medium;
-  background-color: rgb(249, 244, 224);
+  background-color: rgb(165, 164, 160);
   border: none;
+  border-radius: 10px;
 }
 
 .container {
@@ -29,11 +52,14 @@
 
 .editbutton,
 .deletebutton {
-  margin: 30px;
-  background-color: rgb(37, 154, 205);
-  color: antiquewhite;
+  margin: 4px 4px;
+  background-color: rgb(165, 164, 160);
+  color: rgb(24, 24, 23);
   border: none;
-  padding: 15px;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 16px;
+  display: inline-block;
 }
 
 h3 {

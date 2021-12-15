@@ -26,11 +26,11 @@ export default function Detail(props) {
   return (
     <div className="service-detail">
       <h3>Detail</h3>
+        <img className='detail-img' src={specificService?.image_url} />
       <p className="container">{specificService?.specialty}</p>
       <p>{specificService?.description}</p>
-        <img src={specificService?.image_url} />
       {specificService?.reviews.map((review) => (
-        <div>
+        <div className='review-button'>
 
           <p className='review-content'> {review.content} </p>
           <Link to={`/reviews/${review.id}/services/${specificService?.id}`}>
