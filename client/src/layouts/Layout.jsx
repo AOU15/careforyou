@@ -6,6 +6,7 @@ export default function Layout(props) {
       <div>
         <h1 className="title">Care For You</h1>{" "}
       </div>
+      
 
       <div className="link">
         {props.currentUser ? (

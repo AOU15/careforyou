@@ -3,11 +3,13 @@
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  margin-left: 700px;
+  margin-left: 500px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: x-large;
+  font-weight: bold;
   padding: 50px;
-  box-shadow: 0 10px 10px 0 rgba(91, 89, 89, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 10px 10px 0 rgba(157, 161, 164, 0.571);
   transition: 0.3s;
   background-color: #f7f1f14d;
   position: fixed;
@@ -20,7 +22,7 @@
   /* justify-content: flex-start; */
   align-items: center;
   align-content: center;
-  padding: 60px;
+  padding: 100px;
   /* width: 50%;
   height: auto; */
 }
@@ -34,7 +36,7 @@
   margin: 30px;
   padding: 20px;
   font-size: medium;
-  background-color: rgb(165, 164, 160);
+  background-color: rgb(88, 198, 241);
   border: none;
   border-radius: 10px;
 }
@@ -52,12 +54,17 @@
 
 .editbutton,
 .deletebutton {
-  margin: 4px 4px;
-  background-color: rgb(165, 164, 160);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 6px;
+  background-color: rgb(126, 203, 233);
   color: rgb(24, 24, 23);
   border: none;
   text-align: center;
-  padding: 15px 15px;
+  padding: 20px 20px;
   border-radius: 16px;
   display: inline-block;
 }

@@ -17,6 +17,28 @@ body {
   position: fixed;
   overflow: auto;
 }
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: bold;
+  border: rgba(247, 245, 243, 0.893);
+  box-shadow: 0 10px 10px 0 rgba(207, 213, 220, 0.571);
+  margin: 200px;
+  background-color: rgba(248, 248, 255, 0.701);
+  border-radius: 16px;
+  padding: 100px;
+}
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  color: rgb(78, 129, 173);
+}
 
 body {
   background-image: url("https://assets.weforum.org/article/image/large_9uyGPe4H6EsYvEKaga0NCDlBS1EhWVC7FznJh8VMBm8");
@@ -27,6 +49,6 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    background-color: bisque;
+    background-color: rgb(246, 254, 255);
   }
 }
