@@ -5,3 +5,26 @@
   transition: 0.3s;
   background-color: #f7f1f14d;
 } */
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: bold;
+  border: rgba(247, 245, 243, 0.893);
+  box-shadow: 0 10px 10px 0 rgba(207, 213, 220, 0.571);
+  margin: 200px;
+  background-color: rgba(248, 248, 255, 0.701);
+  border-radius: 16px;
+  padding: 100px;
+}
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  color: rgb(78, 129, 173);
+}

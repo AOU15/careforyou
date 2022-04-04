@@ -12,6 +12,8 @@ import ServiceListing from "../screens/ServiceListing/ServiceListing";
 import { getServices } from "../services/service";
 import Detail from "../screens/ServiceListing/Detail";
 import Suggestion from "../screens/Suggestion/Suggestion";
+import Home from "../screens/Home/Home";
+
 
 export default function MainContainer(props) {
   const [toggle, setToggle] = useState(false);
@@ -48,11 +50,7 @@ export default function MainContainer(props) {
   };
 
   return (
-    <div>
-      <div className="intro"> <h1>Welcome to Care For You</h1> <p className="welcome">
-        We dedicate this platform to those in need of a Specialist pertaining to their ailments. Please Login to view a list of services.
-      </p>
-      </div>
+    
       <Switch>
         <Route path="/services/:id/reviews">
           <Review handleReviewCreate={handleReviewCreate} />
@@ -68,8 +66,11 @@ export default function MainContainer(props) {
         </Route>
         <Route exact path="/suggestion">
           <Suggestion />
-        </Route>
+      </Route>
+      <Route path="/home">
+        <Home />
+      </Route>
       </Switch>
-    </div>
+   
   );
 }

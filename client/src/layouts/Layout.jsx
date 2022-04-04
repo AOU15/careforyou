@@ -18,6 +18,8 @@ export default function Layout(props) {
             <Link to="/suggestion">Suggestion</Link>
             <br />
             <Link to="/services">Services</Link>
+            <br />
+            <Link to="/home">Home</Link>
           </>
         ) : (
           <>

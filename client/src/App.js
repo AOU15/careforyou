@@ -7,7 +7,7 @@ import MainContainer from "./containers/MainContainer";
 import "./App.css";
 import Suggestion from "./screens/Suggestion/Suggestion";
 import ServiceDetail from "./screens/ServiceListing/Detail";
-
+import Home from "./screens/Home/Home";
 import {
   loginUser,
   registerUser,
@@ -62,7 +62,9 @@ function App() {
           <Route className="homepage" path="/">
             <MainContainer />
           </Route>
-          
+          <Route path="/home">
+            <Home />
+          </Route>
         </Switch>
       </Layout>
     </div>
